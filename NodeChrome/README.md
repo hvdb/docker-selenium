@@ -5,7 +5,7 @@ This one has 10 instances of chrome and 10 sessions are allowed.
 
 ## Dockerfile
 
-[`selenium/node-chrome` Dockerfile](https://github.com/SeleniumHQ/docker-selenium/blob/master/NodeChrome/Dockerfile)
+[`selenium/node-chrome` Dockerfile](https://github.com/hvdb/docker-selenium/blob/master/NodeChrome/Dockerfile)
 
 ## How to use this image
 
@@ -16,7 +16,7 @@ This means that only 5 webdriver session can be started == 5 tests.
 So if you are running a big test set (or use this chrome node) you need to increase this number.
 
 ```
-$ docker run -d -P --name selenium-hub -e  hvdb/docker-selenium-hub -
+$ docker run -d -P --name selenium-hub  hvdb/docker-selenium-hub
 ```
 
 Once the hub is up and running will want to launch nodes that can run tests. You can run as many nodes as you wish.
