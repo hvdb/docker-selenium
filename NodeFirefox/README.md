@@ -1,6 +1,7 @@
 # Selenium Grid Node - Firefox
 
-Selenium Node configured to run Firefox
+Selenium Node configured to run Firefox.
+This has 10 instances and sessions.
 
 ## Dockerfile
 
@@ -9,15 +10,19 @@ Selenium Node configured to run Firefox
 ## How to use this image
 
 First, you will need a Selenium Grid Hub that the Node will connect to.
+You need to set the max session to the number you want.
+The default is only 5.
+This means that only 5 webdriver session can be started == 5 tests.
+So if you are running a big test set (or use this chrome node) you need to increase this number.
 
 ```
-$ docker run -d -P --name selenium-hub selenium/hub
+$ docker run -d -P --name selenium-hub -e GRID_MAX_SESSION=100 selenium/hub
 ```
 
 Once the hub is up and running will want to launch nodes that can run tests. You can run as many nodes as you wish.
 
 ```
-$ docker run -d --link selenium-hub:hub selenium/node-firefox
+$ docker run -d --link selenium-hub:hub hvdb/docker-node-firefox-10
 ```
 
 ## What is Selenium?
