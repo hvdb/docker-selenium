@@ -16,7 +16,7 @@ This means that only 5 webdriver session can be started == 5 tests.
 So if you are running a big test set (or use this chrome node) you need to increase this number.
 
 ```
-$ docker run -d -P --name selenium-hub -e GRID_MAX_SESSION=100 selenium/hub
+$ docker run -d -P --name selenium-hub hvdb/docker-selenium-hub
 ```
 
 Once the hub is up and running will want to launch nodes that can run tests. You can run as many nodes as you wish.
