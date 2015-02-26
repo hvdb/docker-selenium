@@ -1,10 +1,6 @@
 {
   "capabilities": [
-    {
-      "browserName": "*googlechrome",
-      "maxInstances": 10,
-      "seleniumProtocol": "Selenium"
-    },
+    
     {
       "browserName": "chrome",
       "maxInstances": 10,
