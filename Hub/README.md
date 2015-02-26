@@ -1,7 +1,8 @@
 # Selenium Grid Hub
 
 The Hub receives a test to be executed along with information on which browser and 'platform' where the test should be run. The hub will use this information and delegate to a node that can service those needs.
-
+Changed the timeout to 300000 (5minutes)
+Changed sessions to 100.
 ## Dockerfile
 
 [`selenium/hub` Dockerfile](https://github.com/SeleniumHQ/docker-selenium/blob/master/Hub/Dockerfile)
