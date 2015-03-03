@@ -1,4 +1,4 @@
-FROM hvdb/node-base:2.45.0
+FROM selenium/node-base:2.44.0
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root
